@@ -57,7 +57,7 @@ export type WebhookEmbed = {
     url?: string;
   };
   timestamp?: Date;
-  color?: number;
+  color?: string;
   description?: string;
   fields: WebhookField[];
   footer?: {
@@ -80,7 +80,7 @@ export class MessageBuilder {
   setThumbnail(thumbnailUrl: string): this;
   setImage(image: string): this;
   setTimestamp(): this;
-  setColor(color: number): this;
+  setColor(color: string): this;
   setDescription(description: string): this;
   addField(fieldName: string, fieldValue: string, inline?: boolean): this;
   setFooter(footer: string, footerImage?: string): this;
